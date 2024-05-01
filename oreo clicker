@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Cookie Clicker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: black;
+      background-image: repeating-linear-gradient(45deg, transparent, transparent 25%, red 25%, red 50%);
+      cursor: url('https://image.flaticon.com/icons/png/512/35/35904.png'), auto; /* Cambia la URL por la imagen del cursor */
+    }
+    #cookie-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80vh;
+    }
+    #cookie {
+      width: 200px;
+      height: 200px;
+      background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5Dd4jIYWbCBEEQfpfx4jkoJLzdAA4uPkc1g&s'); /* Cambia la URL por la imagen de la galleta */
+      background-size: cover;
+      background-repeat: no-repeat;
+      cursor: url('https://image.flaticon.com/icons/png/512/35/35904.png'), auto; /* Cambia la URL por la imagen del cursor */
+    }
+    #score {
+      font-size: 24px;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div id="cookie-container">
+    <div id="cookie" onclick="addPoint()"></div>
+  </div>
+  <p>Puntos: <span id="score">0</span></p>
+  <script>
+    let score = 0;
+
+    function addPoint() {
+      score++;
+      document.getElementById('score').innerText = score;
+    }
+  </script>
+</body>
+</html>
